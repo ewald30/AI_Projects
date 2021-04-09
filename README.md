@@ -2,7 +2,7 @@
 Contains multiple simple AI projects that I've worked on
 
 
-1. **Genetic Algorithm**:
+**1. Genetic Algorithm:**
   - It is a simple simulation of a drone that tries to explore a 2D randomized map, discovering as much as possible before returning home.
   - The default settings for the simulation are as follows: 
     - populationSize = 100 (the number of chromosomes that will run under one iteration)
