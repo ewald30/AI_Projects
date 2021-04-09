@@ -14,6 +14,7 @@ Contains multiple simple AI projects that I've worked on
     - nbIterations - 30 (the number of iterations that the algorithm will do)
   These values can be changed from the ui.py file in the view package.
   After the algorithm will finish the number of iterations it will dispplay a graph that plots the average fitness of each generation
+  
   An iteration consists of:  
     - evaluate individuals 
     - select the individuals (using the stochastic approach for Roulette selection) 
