@@ -17,8 +17,8 @@ Contains multiple simple AI projects that I've worked on
   
   
   An iteration consists of:  
-    - evaluate individuals 
-    - select the individuals (using the stochastic approach for Roulette selection) 
+    > evaluate individuals 
+    > select the individuals (using the stochastic approach for Roulette selection) 
     - crossover
     - reestablishing the population (50% selected parents, 50% children)
     - mutate
