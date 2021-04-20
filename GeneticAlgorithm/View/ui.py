@@ -28,8 +28,8 @@ import matplotlib.pyplot as plt
 #  Parameters:
 seeds = [1, 20, 3, 5, 6, 2, 10, 5, 25, 26, 21, 18, 26, 13, 11, 30, 1, 2, 10, 11, 17, 19, 27, 4, 8, 3, 22, 15, 23, 28, 6,
          9, 2, 0]
-populationSize = 100
-inidividualSize = 500
+populationSize = 200
+inidividualSize = 200
 initialCoordinates = (25, 25)
 map = Map(50, 50)
 # map.loadMap("bigMap1")
