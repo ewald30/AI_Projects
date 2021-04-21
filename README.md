@@ -36,3 +36,4 @@ Contains multiple simple AI projects that I've worked on
   - There are two settings that can be configured in main: SLOW_MO and RANDOM_FACTOR
   - RANDOM_FACTOR will try to unbalance the pendulum at each run by adding a random number to the calculated force
   - This variable is used to make the simulation more realistic since by default it will stay balanced perfectly 
+  - NOTE! OPENGL is required in order to run the simulation!
