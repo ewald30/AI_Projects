@@ -17,8 +17,8 @@ from objloader import *
 from random import randint
 
 RANDOM_FACTOR = True
-SLOW_MO = True
-
+SLOW_MO = False
+FIRST_RUN = 160
 
 def loadTexture():
     textureSurface = pygame.image.load('texture_table.png')
@@ -288,6 +288,7 @@ class Table():
 
 
 def test():
+    global FIRST_RUN
     pygame.init()
     pygame.display.set_caption("reversed pendulum")
     viewport = (1800, 600)
@@ -392,10 +393,12 @@ def test():
         newForce = solver(t, w)
         va = 0
 
-        if RANDOM_FACTOR:
-            va = randint(-50, 50)
+        if RANDOM_FACTOR and FIRST_RUN <= 0:
+            va = randint(-100, 100)
 
         if newForce != None:
+            print("run:", FIRST_RUN)
+            FIRST_RUN -= 1
             appliedForce = newForce + va
         print(t, w, appliedForce)
         # se deseneaza pendulul

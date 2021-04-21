@@ -33,12 +33,10 @@ def solver(t,w):
         None :if we have a division by zero
 
     """
-    minINF = -200000
-    maxINf = +200000
 
     #   These are the fuzzy sets that will be used to transform the raw input
-    angleFuzzy = {0: [minINF, 25, 0], 1: [-40, -10, 0], 2: [-20, 0, 0], 3: [-5, 5, 0], 4: [0, 20, 0], 5: [10, 40, 0], 6: [25, maxINf, 0]}
-    speedFuzzy = {0: [minINF, -3, 0], 1: [-6, 0, 0], 2: [-1, 1, 0], 3: [0, 6, 0], 4: [3, maxINf, 0]}
+    angleFuzzy = {0: [-50, -25, 0], 1: [-40, -10, 0], 2: [-20, 0, 0], 3: [-5, 5, 0], 4: [0, 20, 0], 5: [10, 40, 0], 6: [25, 50, 0]}
+    speedFuzzy = {0: [-10, -3, 0], 1: [-6, 0, 0], 2: [-1, 1, 0], 3: [0, 6, 0], 4: [3, 10, 0]}
 
     #   These are the rules that will be used to calculate the fuzzy variable for the force
     rulesFuzzy = {"PVVB": {(6,4):0, (6,3):0, (5,4):0}, "PVB":{(6,2):0, (5,3):0, (4,4):0 }, "PB":{(6,1):0, (5,2):0, (4,3):0, (3,4):0},
@@ -55,9 +53,8 @@ def solver(t,w):
         c = angleFuzzy[x][1]
         b = (a+c)/2
         #   UXS = the degree of membership to each fuzzy set
-        uxA = max(0, min    ((t-a)/(b-a), min(1, (c-t)/(c-b))))
-        if uxA > 0.002:
-            angleFuzzy[x][2] = uxA
+        uxA = max(0, min((t-a)/(b-a), min(1, (c-t)/(c-b))))
+        angleFuzzy[x][2] = uxA
 
     for x in speedFuzzy.keys():
         a = speedFuzzy[x][0]
