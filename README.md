@@ -20,4 +20,20 @@ Contains multiple simple AI projects that I've worked on
     * crossover
     * reestablishing the population (50% selected parents, 50% children)
     * mutate
-    
+
+
+**2. Fuzzy control of Inverted Pendulum:**
+  - Basicaly a demonstration of Knowledge Based Systems (specifically Rule Based Systems)
+  - Works by having expert level knowledge on keeping the inverted pendulum in equilibrium
+  - The pendulum is kept on a car that has to move forward and backwward in order to balance itself
+  - The purpose of the solver is to generate the correct force in order to move the car and keep the pendulum balanced
+  - The solver works as follows:
+    - Gets the angular speed and the angle of the pendulum
+    - Determines the degree of membership to each fuzzy set for those two variables
+    - Constructs the base of rules with the previously calculated values
+    - Evaluates the rules and calculates the result
+    - Defuzzyfies the result in order to return it
+  - There are two settings that can be configured in main: SLOW_MO and RANDOM_FACTOR
+  - RANDOM_FACTOR will try to unbalance the pendulum at each run by adding a random number to the calculated force
+  - This variable is used to make the simulation more realistic since by default it will stay balanced perfectly 
+  - NOTE! OPENGL is required in order to run the simulation!
