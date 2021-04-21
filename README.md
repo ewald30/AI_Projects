@@ -22,7 +22,7 @@ Contains multiple simple AI projects that I've worked on
     * mutate
 
 
-**Fuzzy control of Inverted Pendulum:**
+**2.Fuzzy control of Inverted Pendulum:**
   - Basicaly a demonstration of Knowledge Based Systems (specifically Rule Based Systems)
   - Works by having expert level knowledge on keeping the inverted pendulum in equilibrium
   - The pendulum is kept on a car that has to move forward and backwward in order to balance itself
